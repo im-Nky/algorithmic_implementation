@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-vector <bool> v;
+vector <bool> visited;
 vector <vector<int> > g;
 
 void edge (int a, int b)
@@ -12,22 +12,17 @@ void edge (int a, int b)
 void bfs(int u)
 {
 	queue <int> q;
-	
 	q.push(u);
-	v[u] = true;
-
+	visited[u] = true;
 	while(!q.empty()) {
 		int f=q.front();
 		q.pop();
-
 		cout << f << "->";
-
 		// Enqueue all adjacent of f and mark them visited
-
-		for (auto i = g[f].begin(); i != g[f].end();i++) {
-			if (!v[*i]) {
+		for (auto i = g[f].begin(); i != g[f].end();++i) {
+			if (!visited[*i]) {
 				q.push(*i);
-				v[*i] = true;
+				visited[*i] = true;
 			}
 		}
 	}
@@ -35,11 +30,11 @@ void bfs(int u)
 
 int main()
 {
-	int n,e;
-	cin >> n >> e;
-	v.assign(n,false);
+	int nodes,edges;
+	cin >> nodes;
+	cin >> edges;
+	visited.assign(n,false); 
 	g.assign(n, vector<int>());
-
 	int a, b;
 	for (int i=0;i<e;i++) {
 		cin >> a >> b;
