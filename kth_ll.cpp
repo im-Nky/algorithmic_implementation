@@ -16,5 +16,18 @@ int getNode(SinglyLinkedListNode* head, int positionFromTail) {
     }
     return result->data;
     
-    
+
+// Recursive Approach
+int counter=0;
+int getNode(SinglyLinkedListNode* head, int positionFromTail) {
+    static int val=0;
+    if(head!=NULL) {
+        getNode(head->next,positionFromTail);
+        counter = counter+1;
+        if((counter-1) == positionFromTail)
+            val = head->data;
+    }
+    return val;
+}
+
     
