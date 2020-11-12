@@ -8,7 +8,7 @@ void permute(string s,int l,int r){
 		for(int i=l;i<=r;i++){
 			swap(s[l],s[i]);
 			permute(s,l+1,r);
-			swap(s[l],s[i]);
+			swap(s[l],s[i]);	// Backtracking
 		}
 	}
 }
