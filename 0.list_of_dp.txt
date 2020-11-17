@@ -1,0 +1,16 @@
+
+1. Largest sum contigous array
+2. maximum sum increasing subsequence
+3. longest common subsequence
+4. longest increasing subsequence
+5. longest common substring
+6. knapsack problem
+7. coin change problem
+8. friends pairing problem
+9. rod cutting 
+10. minimum number of jumps to reach end
+11. maximum product cutting
+12. number ofways to reach a given score
+13. number of n digit non decesing integera
+14. min cost path
+15. partition problem
