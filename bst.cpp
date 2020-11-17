@@ -189,4 +189,3 @@ void BST::postorder(struct node *tree1)
 		postrder(tree1->right);
 	}
 }
-
