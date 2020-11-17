@@ -1,3 +1,5 @@
+/* Longest Common Substring: Substring is always continous
+*/
 # include <bits/stdc++.h>
 using namespace std;
 # define ma 1000
