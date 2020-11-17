@@ -1,6 +1,4 @@
 /*Longest Incresing Subsequence in O(nlogn)*/
-
-
 #include <bits/stdc++.h>
 using namespace std;
 
