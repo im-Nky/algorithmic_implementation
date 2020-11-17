@@ -9,10 +9,10 @@ int lcs(string s1,int m,string s2,int n,int t[][ma]) {
 	if(t[m-1][n-1]!=-1) return t[m-1][n-1];
 	
 	if(s1[m-1]==s2[n-1]){
-		t[m-1][n-1]=(1+lcs(s1,m-1,s2,n-1,t));
+		t[m-1][n-1] = (1+lcs(s1,m-1,s2,n-1,t));
 		return t[m-1][n-1];
 	} else {
-		t[m-1][n-1]=max (lcs(s1,m,s2,n-1,t),lcs(s1,m-1,s2,n,t));
+		t[m-1][n-1] = max (lcs(s1,m,s2,n-1,t),lcs(s1,m-1,s2,n,t));
 		return t[m-1][n-1];
 	}
 }
