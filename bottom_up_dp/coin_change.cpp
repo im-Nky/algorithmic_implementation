@@ -26,9 +26,6 @@ int main() {
 
 int min_coins (int a[], int m, int N,int *dp,int n) {
 	int coins = INT_MAX;
-	//if(N==0) return 0;
-	// to compare this result with stored result, Min will be returned
-	//int subAns = 0;
 	for(int i=0;i<m;i++) {
 		if(N-a[i] >= 0) {	// for e.g. 18-7, 18-5, 18-1
 			int subAns = 0;
