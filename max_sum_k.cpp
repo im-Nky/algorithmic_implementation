@@ -2,15 +2,15 @@
 #include <iostream> 
 using namespace std; 
 
-int maxSum(int arr[], int n, int k) 
-{ 
+int maxSum(int arr[], int n, int k) { 
 	if (n < k) { 
-	  cout << "Invalid"; 
-	  return -1; 
+	    cout << "Invalid"; 
+	    return -1; 
 	} 
-  int res = 0;       // Compute sum of first window of size k 
+	
+        int res = 0;       // Compute sum of first window of size k 
 	for (int i=0; i<k; i++) 
-    res += arr[i]; 
+            res += arr[i]; 
     
 	/* Compute sums of remaining windows by removing first element of previous window and adding last element of current window. */ 
 	int curr_sum = res; 
@@ -21,8 +21,7 @@ int maxSum(int arr[], int n, int k)
 	} 
 	return res; 
 }  
-int main() 
-{ 
+int main() { 
 	int arr[] = {1, 4, 2, 10, 2, 3, 1, 0, 20}; 
 	int k = 4; 
 	int n = sizeof(arr)/sizeof(arr[0]); 
