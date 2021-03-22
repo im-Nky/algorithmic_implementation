@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-vector <bool> visited;
-vector <vector<int> > g;
+vector <bool> visited;    /* Array to mark visited nodes */
+vector <vector<int> > g;  /* vector of vector i.e. graph */
 
 void edge (int a, int b)
 {
@@ -15,7 +15,7 @@ void bfs(int u)
 	q.push(u);
 	visited[u] = true;
 	while(!q.empty()) {
-		int f=q.front();
+		int f = q.front();
 		q.pop();
 		cout << f << "->";
 		// Enqueue all adjacent of f and mark them visited
@@ -41,7 +41,7 @@ int main()
 		edge(a,b);
 	}
 	for (int i=0; i<n;i++) {
-		if (!v[i])
+		if (visited[i] == false)
 			bfs(i);
 	}
 	return 0;
