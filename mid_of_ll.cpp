@@ -1,9 +1,9 @@
 /*
   Find middle point of a linked list
-*/
 1. First Method: using traverse 2 times
 2. 2nd Method: Using 2 pointer 
 3. Using recursion
+*/
 
 void reversePrint(SinglyLinkedListNode* head) {
     static int fcount=0;
