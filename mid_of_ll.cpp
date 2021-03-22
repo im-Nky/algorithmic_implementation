@@ -12,8 +12,8 @@ void reversePrint(SinglyLinkedListNode* head) {
         fcount++;
         reversePrint(head->next);
         bcount++;
-        cout<<"len"<<fcount<<endl;
-        cout<<"back"<<bcount<<endl;
+        //cout<<"len"<<fcount<<endl;     // Debug statement
+        //cout<<"back"<<bcount<<endl;
         if(bcount == (fcount/2))
             cout<< head->data <<endl;
     } 
