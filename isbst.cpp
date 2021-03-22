@@ -12,7 +12,7 @@ bool isBST(Node* root) {
 	// traverse the tree in inorder fashion and keep track of prev node 
 	if (root!=NULL) { 
 		if (isBST(root->left)==false) 
-		return false; 
+		        return false; 
 
 		// Allows only distinct valued nodes 
 		if (prev != NULL && root->data <= prev->data) 
@@ -48,4 +48,3 @@ int main()
 
 	return 0;
 }
-
