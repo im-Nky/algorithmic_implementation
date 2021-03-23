@@ -7,12 +7,11 @@ using namespace std;
 int lcs(string s1,string s2,int m,int n,int count) {
 	if(m==0 || n==0) return count;
         if(s1[m-1] == s2[n-1]) {
-                count = lcs(s1,s2,m-1,n-1,count+1);
+                return lcs(s1,s2,m-1,n-1,count+1);
 	}
 	if(s1[m-1]!=s2[n-1]) {
-		count = max(count,max(lcs(s1,s2,m,n-1,0),lcs(s1,s2,m-1,n,0)));
+		return max(count,max(lcs(s1,s2,m,n-1,0),lcs(s1,s2,m-1,n,0)));
 	}
-	return count;
 }
 
 int main() {
